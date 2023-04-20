@@ -216,7 +216,63 @@ se usan para controlar en la manera en la que las instancias son ejecutadas
 solo se puede llamar al constructor desde dentro de la class.. no podemos utilizarlo por fuera
 
 class Nombre {
-    private constructor(){
+private constructor(){
 
     }
+
 }
+
+# SECCION 9 - INTERFACES
+
+## CLASE 67 - interfas basica
+
+Nos ayuda a restringir como lucen los objetos (al igual que los type)
+la diferencia con los type es que las interfaces se pueden extender
+
+## CLASE 68 - estructuras complejas
+
+se recomienda que cuando las interfaces tienen mas de un nivel (un objeto dentro de un objeto), para este nuevo nivel se cree una nueva interfaz
+
+## CLASE 69 - metodos de interfaz
+
+getFullAddress?(id: string): void;
+
+la diferencia con los type es que las funciones de los metodos no son flecha.. dsp del parentesis de los argumentos va directo dos puntos : y el tipo de respuesta esperada
+
+la direncia con las classes.. es que la class tiene la logica para resolve el method.. mientras que la interfaz solo dice como debe verse este method (que recibe y que devuelve)
+
+## CLASE 70 - interfaces en las classes
+
+para relacionar una interfaz en un clase utilizamos la palabra reservada "implement"
+
+tmb podemos implementar mas de una interfaz en una class
+
+class Algo implements Interfaz1, Interfaz2 { ...... }
+
+# SECCION 10 - nameSpaces
+
+## CLASE 77 - Módulos y Webpack
+
+USAMOS LA CARPETA ts-node
+
+para trabajar con modulos en el tsconfig.json habilitamos las configuraciones
+"module": "amd",  
+"moduleResolution": "node",
+
+# SECCION 11 - GENERICOS
+
+## CLASE 83 - funciones genericas
+
+es una funcion que puede recibir cualquier tipo de argumento y TS descubre de que tipo es este argumento
+
+para determinar que es una funcion generica agregamos <T> dsp del nombre de la funcion (T es un estandar usado, puede ser cualquier letra)
+=> function nombrefuncion<T>(argumento: T) {lo que hace la funcion}
+=> const nombrefuncion = <T>(argumento: T) => lo que hace la funcion
+
+### CLASE 84 -
+
+# SECCION 12 - DECORADORES
+
+## clase 92
+
+Es una funcion que se ejecuta al momento de traspilacion de typescript, para añadir funcionalidades a un objeto.
